@@ -1,0 +1,22 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    #title-icon {
+        margin-right: 5px;
+    }
+}
+
+.subtitle {
+    margin-left: 3em;
+    font-size: small;
+    a {
+        color: white;
+    }
+}
+.active {
+    background-color: #707070 !important;
+}

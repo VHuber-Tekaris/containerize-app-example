@@ -1,0 +1,14 @@
+.park-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 64px);
+    
+    .table-container {
+        padding: 2em;
+
+        table {
+            width: 100%;
+          }
+    }
+}

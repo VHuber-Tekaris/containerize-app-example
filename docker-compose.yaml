@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  wiremock:
+    restart: on-failure
+    container_name: backend-api
+    build: ./wiremock
+    # ports:
+    #   - '8080:8080'

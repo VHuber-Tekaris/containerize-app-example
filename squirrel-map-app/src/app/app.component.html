@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span class="title"><mat-icon id="title-icon">location_on</mat-icon> Squirrel Map</span>
+  <span class="subtitle">Data obtained from <a href="https://www.thesquirrelcensus.com/" target="_blank">NYC squirrel
+      census</a>.</span>
+  <span class="spacer"></span>
+  <button mat-raised-button routerLink="/parks" routerLinkActive="active">
+    <mat-icon>park</mat-icon>
+    Parks
+  </button>
+  <button mat-raised-button routerLink="/map" routerLinkActive="active">
+    <mat-icon>map</mat-icon>
+    Map
+  </button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

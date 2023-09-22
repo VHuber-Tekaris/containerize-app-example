@@ -1,0 +1,50 @@
+<div class="park-container">
+    <div class="table-container">
+
+        <table mat-table [dataSource]="parksDataSource" matSort class="mat-elevation-z8">
+
+            <ng-container matColumnDef="AreaName">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Area name</th>
+                <td mat-cell *matCellDef="let element"> {{element.AreaName}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="ParkName">
+                <th mat-header-cell *matHeaderCellDef>Park name</th>
+                <td mat-cell *matCellDef="let element"> {{element.ParkName}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="ParkConditions">
+                <th mat-header-cell *matHeaderCellDef> Conditions </th>
+                <td mat-cell *matCellDef="let element"> {{element.ParkConditions}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="OtherAnimalSightings">
+                <th mat-header-cell *matHeaderCellDef> Other animals </th>
+                <td mat-cell *matCellDef="let element"> {{element.OtherAnimalSightings}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Litter">
+                <th mat-header-cell *matHeaderCellDef> Litter </th>
+                <td mat-cell *matCellDef="let element"> {{element.Litter}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="TemperatureWeather">
+                <th mat-header-cell *matHeaderCellDef> Weather </th>
+                <td mat-cell *matCellDef="let element"> {{element.TemperatureWeather}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="NrOfSquirrels">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Nr. of squirrels </th>
+                <td mat-cell *matCellDef="let element"> {{element.NrOfSquirrels}} </td>
+            </ng-container>
+            <ng-container matColumnDef="NrOfSighters">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Nr. of squirrel sighters </th>
+                <td mat-cell *matCellDef="let element"> {{element.NrOfSighters}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25]" aria-label="Select page">
+        </mat-paginator>
+    </div>
+</div>
